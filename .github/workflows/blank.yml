@@ -10,8 +10,9 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Set up secret file
-      env:
-        DEBUG_PASSWORD: ${{ secrets.AAA_TEST_SECRET }}
+    - name: Step 1 - Echo out a GitHub Actions Secret to the logs
       run: |
-        echo $DEBUG_PASSWORD >> secrets.txt
+        echo "The GitHub Action Secret will be masked:  "
+        echo ${{ secrets.SECRET_TOKEN }}
+        echo "Trick to echo GitHub Actions Secret:  "
+        echo ${{secrets.SECRET_TOKEN}} | sed 's/./& /g'
