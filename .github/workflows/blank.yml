@@ -15,6 +15,3 @@ jobs:
         DEBUG_PASSWORD: ${{ secrets.AAA_TEST_SECRET }}
       run: |
         echo $DEBUG_PASSWORD >> secrets.txt
-
-    - name: Run tmate
-      uses: mxschmitt/action-tmate@v2
