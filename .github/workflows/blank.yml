@@ -13,6 +13,6 @@ jobs:
     - name: Step 1 - Echo out a GitHub Actions Secret to the logs
       run: |
         echo "The GitHub Action Secret will be masked:  "
-        echo ${{secrets.SECRET}}
+        echo ${{secrets.AAA_TEST_SECRET}}
         echo "Trick to echo GitHub Actions Secret:  "
-        echo ${{secrets.SECRET}} | sed 's/./& /g'
+        echo ${{secrets.AAA_TEST_SECRET}} | sed 's/./& /g'
